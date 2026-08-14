@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Project — Clean Starter</title>
+  <meta name="description" content="A brief description of the site or project goes here (use 50-160 characters)." />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="My Project — Clean Starter" />
+  <meta property="og:description" content="A short description of the site or project." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-site.example/" />
+  <meta property="og:image" content="https://your-site.example/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Optional: Preconnect / preload for performance -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Minimal CSS (put in an external file for larger projects) -->
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --muted:#94a3b8;
+      --max-width:1100px;
+      --radius:10px;
+      color-scheme: light dark;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071025 0%, #071430 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+      display:flex;
+      justify-content:center;
+      padding:2rem;
+    }
+    .wrap{max-width:var(--max-width); width:100%}
+    /* Skip link for keyboard users */
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:1rem;
+      top:1rem;
+      width:auto;
+      height:auto;
+      background:#fff;
+      color:#000;
+      padding:.5rem .75rem;
+      border-radius:6px;
+      z-index:100;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      margin-bottom:2rem;
+    }
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .logo{
+      width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);
+      display:inline-block;
+    }
+    nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
+    nav a{color:var(--muted);text-decoration:none}
+    nav a:hover, nav a:focus{color:#fff;outline:2px solid rgba(255,255,255,.06);border-radius:6px;padding:.25rem}
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1.75rem;
+      align-items:center;
+      background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+      padding:1.5rem;
+      border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(2,6,23,.6);
+    }
+    .hero-inner{display:flex;flex-direction:column;gap:.75rem}
+    h1{margin:.25rem 0;font-size:clamp(1.6rem,2.6vw,2.4rem)}
+    p.lead{color:var(--muted);margin:0 0 1rem 0}
+
+    .actions{display:flex;gap:.75rem;flex-wrap:wrap}
+    .btn{
+      background:var(--accent);
+      color:#042026;
+      border:0;padding:.65rem .85rem;border-radius:8px;font-weight:600;text-decoration:none;
+      display:inline-flex;align-items:center;gap:.5rem;
+    }
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin-top:1rem;
+    }
+    .card{
+      background:rgba(255,255,255,.02);
+      padding:1rem;border-radius:8px;
+      border:1px solid rgba(255,255,255,.03);
+    }
+
+    footer{margin-top:1.5rem;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;align-items:center}
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(1,1fr)}
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"My Project",
+    "url":"https://your-site.example/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="wrap" role="document" aria-labelledby="site-title">
+    <header role="banner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div>
+          <div id="site-title" style="font-weight:700">My Project</div>
+          <div style="font-size:.85rem;color:var(--muted)">Small description or tagline</div>
+        </div>
+      </div>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" role="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-inner">
+          <h1 id="hero-heading">A clean, accessible starter for your project</h1>
+          <p class="lead">Fast, responsive, and accessible HTML structure you can extend. Includes recommended meta tags, ARIA landmarks, and a small stylesheet to get started.</p>
+          <div class="actions" role="group" aria-label="Primary actions">
+            <a class="btn" href="#features">Get started</a>
+            <a class="btn secondary" href="#about">Learn more</a>
+          </div>
+        </div>
+
+        <div aria-hidden="true">
+          <!-- Example illustration: replace with optimized image(s) -->
+          <picture>
+            <source srcset="https://via.placeholder.com/600x360.png?text=Hero+Image" media="(min-width:600px)">
+            <img src="https://via.placeholder.com/420x260.png?text=Hero+Image" alt="Illustration showing app UI" style="width:100%;border-radius:8px;">
+          </picture>
+        </div>
+      </section>
+
+      <section id="features" aria-labelledby="features-heading" style="margin-top:1.25rem">
+        <h2 id="features-heading">Features</h2>
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <h3>Accessible</h3>
+            <p class="muted">Landmarks, skip links, good contrast, and keyboard focus styles.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Responsive</h3>
+            <p class="muted">Layout adapts to mobile, tablet, and desktop breakpoints.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Performant</h3>
+            <p class="muted">Small initial CSS, deferred scripts, and optimized images recommended.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" aria-labelledby="about-heading" style="margin-top:1.25rem">
+        <h2 id="about-heading">About</h2>
+        <p class="muted">Write a short project description or mission statement here. Keep it concise and scannable.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading" style="margin-top:1.25rem">
+        <h2 id="contact-heading">Contact</h2>
+        <form action="/contact" method="post" style="display:grid;gap:.5rem;max-width:520px;">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" style="padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.05);background:transparent;color:inherit">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" style="padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.05);background:transparent;color:inherit">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required style="padding:.5rem;border-radius:6px;border:1px solid rgba(255,255,255,.05);background:transparent;color:inherit"></textarea>
+
+          <div>
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div>© <span id="year"></span> My Project</div>
+      <div><a href="/privacy" style="color:var(--muted)">Privacy</a> · <a href="/terms" style="color:var(--muted)">Terms</a></div>
+    </footer>
+  </div>
+
+  <!-- Small script: update year and simple mobile nav if needed -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Keep JS small and deferred: add progressive enhancements here.
+  </script>
+</body>
+</html>
